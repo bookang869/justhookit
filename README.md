@@ -1,4 +1,4 @@
-# JustHookIt!
+# JustHookIt
 
 A collection of useful React Hooks ready to install with NPM
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useScroll = () => {
+const useScroll = () => {
 	const [state, setState] = useState({ x: 0, y: 0 });
 
   const onScroll = () => {
@@ -15,3 +15,5 @@ export const useScroll = () => {
 	}, []);
 	return state;
 };
+
+export default useScroll;

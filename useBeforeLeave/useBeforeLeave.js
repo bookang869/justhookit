@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useBeforeLeave = (onBefore) => {
+const useBeforeLeave = (onBefore) => {
 	if (typeof onBefore !== "function") {
 		return;
 	}
@@ -18,3 +18,5 @@ export const useBeforeLeave = (onBefore) => {
 		return () => document.removeEventListener("mouseleave", handle);
 	}, []);
 };
+
+export default useBeforeLeave;

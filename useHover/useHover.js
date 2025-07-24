@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export const useHover = (onHover) => {
+const useHover = (onHover) => {
   if (typeof onHover !== "function") {
     return;
   }
@@ -20,3 +20,5 @@ export const useHover = (onHover) => {
   }, []);
   return element;
 };
+
+export default useHover;

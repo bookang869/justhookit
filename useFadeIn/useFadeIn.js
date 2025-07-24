@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export const useFadeIn = (duration = 1, delay = 0) => {
+const useFadeIn = (duration = 1, delay = 0) => {
 	if (typeof duration !== "number" || typeof delay !== "number") {
 		return;
 	}
@@ -16,3 +16,5 @@ export const useFadeIn = (duration = 1, delay = 0) => {
 	}, []);
 	return { ref: element, style: { opacity: 0 } };
 };
+
+export default useFadeIn;
