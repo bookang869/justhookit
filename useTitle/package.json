@@ -1,0 +1,27 @@
+{
+  "name": "@justhookit/use-title",
+  "version": "1.0.2",
+  "description": "React Hook to update your document's title",
+  "keywords": [
+    "react",
+    "hooks",
+    "title"
+  ],
+  "homepage": "https://github.com/bookang869/justhookit#readme",
+  "bugs": {
+    "url": "https://github.com/bookang869/justhookit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bookang869/justhookit.git"
+  },
+  "license": "MIT",
+  "author": "Kyle Boo <bookyle02@gmail.com>",
+  "type": "commonjs",
+  "main": "useTitle.js",
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "scheduler": "^0.26.0"
+  }
+}
