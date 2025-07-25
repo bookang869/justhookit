@@ -12,32 +12,24 @@ React Hook to naviagte between different tabs.
 ## Usage
 ```js
 import React from "react";
-import useTabs from "@justhookit/use-tabs";  
-
-// example content
-const content = [
-  {
-    tab: "Section 1",
-    content: "I'm the content of Section 1",
-  },
-  {
-    tab: "Section 2",
-    content: "I'm the content of Section 2",
-  },
-];
+import useConfirm from "@justhookit/use-confirm";
 
 function App() {
-  const { currentItem, changeItem } = useTabs(0, content);
+	const deleteItem = () => {
+		console.log("Deleting Item...");
+	};
+	
+	const abort = () => {
+		console.log("aborted");
+	}
 
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      {content.map((section, idx) => (
-        <button onClick={() => changeItem(idx)}>{section.tab}</button>
-      ))}
-      <div>{currentItem.content}</div>
-    </div>
-  );
+	const confirmDelete = useConfirm("Are you sure?", deleteItem, abort);
+	
+	return (
+		<div className="App">
+		<button onClick={confirmDelete}>Delete the item</button>
+		</div>
+	);
 }
 ```
 

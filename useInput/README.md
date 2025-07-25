@@ -12,30 +12,16 @@ React Hook to naviagte between different tabs.
 ## Usage
 ```js
 import React from "react";
-import useTabs from "@justhookit/use-tabs";  
-
-// example content
-const content = [
-  {
-    tab: "Section 1",
-    content: "I'm the content of Section 1",
-  },
-  {
-    tab: "Section 2",
-    content: "I'm the content of Section 2",
-  },
-];
+import useInput from "@justhookit/use-input";
 
 function App() {
-  const { currentItem, changeItem } = useTabs(0, content);
+  const maxLen = (value) => !value.includes('@');
+  const name = useInput("Mr.", maxLen);
 
   return (
     <div className="App">
       <h1>Hello</h1>
-      {content.map((section, idx) => (
-        <button onClick={() => changeItem(idx)}>{section.tab}</button>
-      ))}
-      <div>{currentItem.content}</div>
+      <input placeholder="Name" {...name} />
     </div>
   );
 }

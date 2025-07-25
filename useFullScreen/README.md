@@ -12,32 +12,24 @@ React Hook to naviagte between different tabs.
 ## Usage
 ```js
 import React from "react";
-import useTabs from "@justhookit/use-tabs";  
-
-// example content
-const content = [
-  {
-    tab: "Section 1",
-    content: "I'm the content of Section 1",
-  },
-  {
-    tab: "Section 2",
-    content: "I'm the content of Section 2",
-  },
-];
+import useFullScreen from "@justhookit/use-full-screen";
 
 function App() {
-  const { currentItem, changeItem } = useTabs(0, content);
+	const onFullScreen = (isFull) => {
+		console.log(isFull ? "Full Screen" : "Small Screen");
+	};
 
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      {content.map((section, idx) => (
-        <button onClick={() => changeItem(idx)}>{section.tab}</button>
-      ))}
-      <div>{currentItem.content}</div>
-    </div>
-  );
+	const { element, triggerFull, exitFull } = useFullScreen(onFullScreen);
+
+	return (
+		<div className="App" style={{ height: "1000vh" }}>
+		<div ref={element}>
+			<img src="https://cdn.shopify.com/s/files/1/1426/3142/files/shutterstock_2459930529_480x480.jpg?v=1724300172" />
+			<button onClick={triggerFull}>Make Full Screen</button>
+			<button onClick={exitFull}>Exit Full Screen</button>
+		</div>
+		</div>
+	);
 }
 ```
 

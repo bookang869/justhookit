@@ -1,18 +1,1 @@
-import useScroll from "react-use";
-import { createRoot } from "react-dom/client";
-
-function App() {
-	const { x, y } = useScroll();
-
-	return (
-		<div className="App" style={{ height: "1000vh" }}>
-			<h1 style={{ position: "fixed", color: y > 100 ? "red" : "blue" }}>
-				Hello
-			</h1>
-		</div>
-	);
-}
-
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-root.render(<App />);
+export { useScroll as default } from "./useScroll.js";

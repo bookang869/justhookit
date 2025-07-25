@@ -12,32 +12,18 @@ React Hook to naviagte between different tabs.
 ## Usage
 ```js
 import React from "react";
-import useTabs from "@justhookit/use-tabs";  
-
-// example content
-const content = [
-  {
-    tab: "Section 1",
-    content: "I'm the content of Section 1",
-  },
-  {
-    tab: "Section 2",
-    content: "I'm the content of Section 2",
-  },
-];
+import useScroll from "@justhookit/use-scroll";
 
 function App() {
-  const { currentItem, changeItem } = useTabs(0, content);
+	const { x, y } = useScroll();
 
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      {content.map((section, idx) => (
-        <button onClick={() => changeItem(idx)}>{section.tab}</button>
-      ))}
-      <div>{currentItem.content}</div>
-    </div>
-  );
+	return (
+		<div className="App" style={{ height: "1000vh" }}>
+			<h1 style={{ position: "fixed", color: y > 100 ? "red" : "blue" }}>
+				Hello
+			</h1>
+		</div>
+	);
 }
 ```
 

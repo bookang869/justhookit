@@ -12,32 +12,18 @@ React Hook to naviagte between different tabs.
 ## Usage
 ```js
 import React from "react";
-import useTabs from "@justhookit/use-tabs";  
-
-// example content
-const content = [
-  {
-    tab: "Section 1",
-    content: "I'm the content of Section 1",
-  },
-  {
-    tab: "Section 2",
-    content: "I'm the content of Section 2",
-  },
-];
+import useNotification from "@justhookit/use-notification";
 
 function App() {
-  const { currentItem, changeItem } = useTabs(0, content);
+	const triggerNotif = useNotification("Here is your notification!", {
+		body: "Here is the content!",
+	});
 
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      {content.map((section, idx) => (
-        <button onClick={() => changeItem(idx)}>{section.tab}</button>
-      ))}
-      <div>{currentItem.content}</div>
-    </div>
-  );
+	return (
+		<div className="App" style={{ height: "1000vh" }}>
+			<button onClick={triggerNotif}>Notify!</button>
+		</div>
+	);
 }
 ```
 

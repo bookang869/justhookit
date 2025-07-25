@@ -12,32 +12,20 @@ React Hook to naviagte between different tabs.
 ## Usage
 ```js
 import React from "react";
-import useTabs from "@justhookit/use-tabs";  
-
-// example content
-const content = [
-  {
-    tab: "Section 1",
-    content: "I'm the content of Section 1",
-  },
-  {
-    tab: "Section 2",
-    content: "I'm the content of Section 2",
-  },
-];
+import useNetwork from "@justhookit/use-network";
 
 function App() {
-  const { currentItem, changeItem } = useTabs(0, content);
+	const handleNetworkChange = (online) => {
+		console.log(online ? "Online" : "Offline");
+	};
 
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      {content.map((section, idx) => (
-        <button onClick={() => changeItem(idx)}>{section.tab}</button>
-      ))}
-      <div>{currentItem.content}</div>
-    </div>
-  );
+	const onLine = useNetwork(handleNetworkChange);
+
+	return (
+		<div className="App">
+			<h1>{onLine ? "Online" : "Offline"}</h1>
+		</div>
+	);
 }
 ```
 
