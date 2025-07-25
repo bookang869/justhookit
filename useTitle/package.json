@@ -18,7 +18,7 @@
   "license": "MIT",
   "author": "Kyle Boo <bookyle02@gmail.com>",
   "type": "commonjs",
-  "main": "useTitle.js",
+  "main": "index.js",
   "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
