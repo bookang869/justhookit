@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-network
+React Hook to detect whether the user is online or offline.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-network`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-network`
 
 ## Usage
 ```js
@@ -30,7 +30,11 @@ function App() {
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument | Type     | Description              							 | Required |
+|----------|----------|------------------------------------------------------|----------|
+| onChange | Function | Optional callback triggered on network status change | no       |
+
+## Returns
+| Return | Type    | Description                      |
+|--------|---------|----------------------------------|
+| status | Boolean | true if online, false if offline |

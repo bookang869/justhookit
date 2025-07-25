@@ -1,5 +1,5 @@
 # @hooks/use-title
-React Hook to dynamically update the document title.
+React Hook to dynamically update the browser title.
 
 ## Installation
 
@@ -24,6 +24,11 @@ function App() {
 ```
 
 ## Arguments
-| Argument | Type   | Description                                     | Required |
-|----------|--------|-------------------------------------------------|----------|
-| title    | String | The new title you want to apply to your document| yes      |
+| Argument     | Type   | Description                | Required |
+|--------------|--------|----------------------------|----------|
+| initialTitle | String | The initial document title | yes      |
+
+## Returns
+| Argument | Type      | Description                           |
+|----------|-----------|---------------------------------------|
+| setTitle | Function  | Function to update the document title |

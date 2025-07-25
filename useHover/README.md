@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-hover
+React Hook to detect a hover on any React element.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-hover`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-hover`
 
 ## Usage
 ```js
@@ -15,22 +15,26 @@ import React from "react";
 import useHover from "@justhookit/use-hover";
 
 function App() {
-  const sayHello = () => {
+  const onHover = () => {
     console.log("Hello!");
   };
   
-  const title = useHover(sayHello);
+  const title = useHover(onHover);
 
   return (
     <div className="App">
-      <h1 ref={title}> Hi</h1>
+      <h1 ref={title}> Hello World</h1>
     </div>
   );
 }
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument | Type     | Description                    | Required |
+|----------|----------|--------------------------------|----------|
+| onHover  | Function | Function to run on mouse enter | yes      |
+
+## Returns
+| Return  | Type             | Description                                       |
+|---------|------------------|---------------------------------------------------|
+| element | MutableRefObject | Ref to be attached to the hoverable React element |

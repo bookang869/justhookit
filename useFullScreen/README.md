@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-full-screen
+React Hook to activate/deactivate full screen mode on any React element.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-full-screen`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-full-screen`
 
 ## Usage
 ```js
@@ -34,7 +34,13 @@ function App() {
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument     | Type     | Description              			                   | Required |
+|--------------|----------|--------------------------------------------------------|----------|
+| callback     | Function | Called with true on enter and false on exit fullscreen | yes      |
+
+## Returns
+| Return      | Type    		  | Description                                              |
+|-------------|------------------|----------------------------------------------------------|
+| element     | MutableRefObject | Ref to attach to the element to fullscreen               |
+| triggerFull | Function         | Call to enter fullscreen                                 |
+| exitFull    | Function         | Call to exit fullscreen					                |

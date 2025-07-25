@@ -42,7 +42,13 @@ function App() {
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument   | Type    | Description                     | Required |
+|------------|---------|---------------------------------|----------|
+| initialTab | Number  | Index of initially selected tab | yes      |
+| allTabs    | Array   | Array of tab data               | yes      |
+
+## Returns
+| Return      | Type     | Description                                 |
+|-------------|----------|---------------------------------------------|
+| currentItem | any      | Currently selected tab content              |
+| changeItem  | Function | Function to change the current tab by index |

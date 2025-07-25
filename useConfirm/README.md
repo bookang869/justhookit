@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-confirm
+React Hook to ask the user for confirmation before executing a function.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-confirm`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-confirm`
 
 ## Usage
 ```js
@@ -15,7 +15,7 @@ import React from "react";
 import useConfirm from "@justhookit/use-confirm";
 
 function App() {
-	const deleteItem = () => {
+	const execute = () => {
 		console.log("Deleting Item...");
 	};
 	
@@ -23,18 +23,24 @@ function App() {
 		console.log("aborted");
 	}
 
-	const confirmDelete = useConfirm("Are you sure?", deleteItem, abort);
+	const confirmExecution = useConfirm("Are you sure?", execute, abort);
 	
 	return (
 		<div className="App">
-		<button onClick={confirmDelete}>Delete the item</button>
+			<button onClick={confirmExecution}>Execute the function</button>
 		</div>
 	);
 }
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument  | Type     | Description            					       | Required |
+|-----------|----------|------------------------------------------------|----------|
+| mesage    | String   | The message to show in the confirmation dialog | yes      |
+| onConfirm | Function | Function to execute if user confirm            | yes      |
+| onCancel  | Function | Function to execute if user cancels            | yes      |
+
+## Returns
+| Return 		| Type     | Description                                  |
+|---------------|----------|----------------------------------------------|
+| confirmAction | Function | Function to trigger the confirmation process |

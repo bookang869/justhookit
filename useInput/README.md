@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-input
+React Hook to manage controlled form input with optional validation.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-input`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-input`
 
 ## Usage
 ```js
@@ -15,8 +15,9 @@ import React from "react";
 import useInput from "@justhookit/use-input";
 
 function App() {
-  const maxLen = (value) => !value.includes('@');
-  const name = useInput("Mr.", maxLen);
+  const initialVal = "Mickey";
+  const validator = (value) => !value.includes('@');
+  const name = useInput(initialVal, validator);
 
   return (
     <div className="App">
@@ -28,7 +29,13 @@ function App() {
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument     | Type     | Description                 | Required |
+|--------------|----------|-----------------------------|----------|
+| initialValue | String   | Initial value of the input  | yes      |
+| validator    | Function | Optional validator function | yes      |
+
+## Returns
+| Return   | Type     | Description                               |
+|----------|----------|-------------------------------------------|
+| value    | String   | Current value of the input                |
+| onChange | Function | Function to validate and update the input |

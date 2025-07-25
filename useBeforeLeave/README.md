@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-before-leave
+React Hook to execute a function when mouse leaves the top edge of the window
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-before-leave`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-before-leave`
 
 ## Usage
 ```js
@@ -15,22 +15,21 @@ import React from "react";
 import useBeforeLeave from "@justhookit/use-before-leave";
 
 function App() {
-	const askNotToLeave = () => {
+	const onLeave = () => {
 		console.log("Please don't leave...");
 	};
 
-	useBeforeLeave(askNotToLeave);
+	useBeforeLeave(onLeave);
 
 	return (
 		<div className="App">
-			<h1>Hello</h1>
+			<h1>Hello World</h1>
 		</div>
 	);
 }
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument | Type     | Description            								 | Required |
+|----------|----------|------------------------------------------------------|----------|
+| onBefore | Function | Function to call when mouse leaves top of the window | yes      |

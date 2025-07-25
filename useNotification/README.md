@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-notification
+React Hook to enable web browser notifications.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-notification`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-notification`
 
 ## Usage
 ```js
@@ -28,7 +28,15 @@ function App() {
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument | Type   | Description              					| Required |
+|----------|--------|-------------------------------------------|----------|
+| title    | String | Notification of title 					| yes      |
+| options  | Object | Optional configuration (body, icon, etc.) | no       |
+
+## Returns
+| Return    | Type     | Description                          |
+|-----------|----------|--------------------------------------|
+| fireNotif | Function | Function to trigger the notification |
+
+## Notes
+***ONLY works when the notificaiton setting is turned on***

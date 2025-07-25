@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-scroll
+React Hook to track the current (X,Y) coordiantes of scroll position.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-scroll`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-scroll`
 
 ## Usage
 ```js
@@ -20,15 +20,15 @@ function App() {
 	return (
 		<div className="App" style={{ height: "1000vh" }}>
 			<h1 style={{ position: "fixed", color: y > 100 ? "red" : "blue" }}>
-				Hello
+				Hello World
 			</h1>
 		</div>
 	);
 }
 ```
 
-## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+## Returns
+| Return | Type    | Description                         |
+|--------|---------|-------------------------------------|
+| x      | number  | Horizontal scroll position (pixels) |
+| y      | number  | Vertical scroll position (pixels)   |

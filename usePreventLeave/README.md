@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-prevent-leave
+React Hook to warn the user before accidentally leaving the page.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-prevent-leave`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-prevent-leave`
 
 ## Usage
 ```js
@@ -26,8 +26,8 @@ function App() {
 }
 ```
 
-## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+## Returns
+| Return         | Type     | Description                      |
+|----------------|----------|----------------------------------|
+| enablePrevent  | Function | Enables the confirmation dialog  |
+| disablePrevent | Function | Disables the confirmation dialog |

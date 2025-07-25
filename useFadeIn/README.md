@@ -1,13 +1,13 @@
-# @hooks/use-tabs
-React Hook to naviagte between different tabs.
+# @hooks/use-fade-in
+React Hook to apply a fade-in effect to any React element.
 
 ## Installation
 
 #### npm
-`npm i @justhookit/use-tabs`
+`npm i @justhookit/use-fade-in`
 
 #### yarn
-`yarn add @justhookit/use-tabs`
+`yarn add @justhookit/use-fade-in`
 
 ## Usage
 ```js
@@ -28,7 +28,13 @@ function App() {
 ```
 
 ## Arguments
-| Argument | Type    | Description              | Required |
-|----------|---------|--------------------------|----------|
-| idx      | Integer | The index of initial tab | yes      |
-| content  | Array   | The list of tabs         | yes      |
+| Argument | Type   | Description              					     | Required |
+|----------|--------|------------------------------------------------|----------|
+| duration | Number | Duration of the fade-in animation (in seconds) | no       |
+| delay    | Number | Delay before animation starts (in seconds)     | no       |
+
+## Returns
+| Return | Type                | Description                           |
+|--------|---------------------|---------------------------------------|
+| ref    | MutableRefObject    | Ref to attach to the fading element   |
+| style  | React.CSSProperties | Initial style with opacity value of 0 |
