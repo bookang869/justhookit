@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import defaultAxios from "axios";
 
-const useAxios = (opts, axiosInstance = defaultAxios) => {
+export const useAxios = (opts, axiosInstance = defaultAxios) => {
 	if (!opts.url) {
     return;
   }
@@ -38,5 +38,3 @@ const useAxios = (opts, axiosInstance = defaultAxios) => {
   }, [trigger]);
   return { ...state, refetch };
 };
-
-export default useAxios;

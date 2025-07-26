@@ -1,4 +1,4 @@
-# @hooks/use-prevent-leave
+# @justhookit/use-prevent-leave
 React Hook to warn the user before accidentally leaving the page.
 
 ## Installation

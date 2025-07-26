@@ -1,4 +1,4 @@
-# @hooks/use-scroll
+# @justhookit/use-scroll
 React Hook to track the current (X,Y) coordiantes of scroll position.
 
 ## Installation

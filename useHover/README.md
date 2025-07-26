@@ -1,4 +1,4 @@
-# @hooks/use-hover
+# @justhookit/use-hover
 React Hook to detect a hover on any React element.
 
 ## Installation

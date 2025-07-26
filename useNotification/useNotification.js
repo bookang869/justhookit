@@ -1,4 +1,4 @@
-const useNotification = (title, options) => {
+export const useNotification = (title, options) => {
 	if (!("Notification" in window)) {
 		return;
 	}
@@ -18,5 +18,3 @@ const useNotification = (title, options) => {
 	};
 	return fireNotif;
 };
-
-export default useNotification;

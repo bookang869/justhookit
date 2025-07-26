@@ -1,4 +1,4 @@
-# @hooks/use-network
+# @justhookit/use-network
 React Hook to detect whether the user is online or offline.
 
 ## Installation

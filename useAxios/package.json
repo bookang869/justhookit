@@ -1,11 +1,11 @@
 {
-  "name": "@justhookit/use-title",
-  "version": "1.0.5",
-  "description": "React Hook to update your document's title",
+  "name": "@justhookit/use-axios",
+  "version": "1.0.0",
+  "description": "React Hook to fetch data using Axios with built-in loading, error, and refetch support.",
   "keywords": [
     "react",
     "hooks",
-    "title"
+    "axios"
   ],
   "homepage": "https://github.com/bookang869/justhookit#readme",
   "bugs": {
@@ -21,7 +21,6 @@
   "main": "index.js",
   "peerDependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "scheduler": "^0.26.0"
+    "react-dom": "^19.1.0"
   }
 }

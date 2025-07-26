@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const useFullScreen = (callback) => {
+export const useFullScreen = (callback) => {
 	const element = useRef();
 
 	const runCallback = (isFull) => {
@@ -26,7 +26,7 @@ const useFullScreen = (callback) => {
 	};
 
 	const exitFull = () => {
-		if (document.requestFullscreen) {
+		if (document.exitFullscreen) {
 			document.exitFullscreen();
 		} else if (document.mozRequestFullscreen) {
 			document.mozCancelFullScreen();
@@ -40,5 +40,3 @@ const useFullScreen = (callback) => {
 	};
 	return { element, triggerFull, exitFull };
 };
-
-export default useFullScreen;

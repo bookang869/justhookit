@@ -1,4 +1,4 @@
-# @hooks/use-before-leave
+# @justhookit/use-before-leave
 React Hook to execute a function when mouse leaves the top edge of the window
 
 ## Installation

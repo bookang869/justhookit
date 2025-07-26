@@ -1,4 +1,4 @@
-# @hooks/use-input
+# @justhookit/use-input
 React Hook to manage controlled form input with optional validation.
 
 ## Installation

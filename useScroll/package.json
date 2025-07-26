@@ -1,11 +1,11 @@
 {
-  "name": "@justhookit/use-title",
-  "version": "1.0.5",
-  "description": "React Hook to update your document's title",
+  "name": "@justhookit/use-scroll",
+  "version": "1.0.1",
+  "description": "React Hook to track the current (X,Y) coordiantes of scroll position.",
   "keywords": [
     "react",
     "hooks",
-    "title"
+    "scroll"
   ],
   "homepage": "https://github.com/bookang869/justhookit#readme",
   "bugs": {
@@ -21,7 +21,6 @@
   "main": "index.js",
   "peerDependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "scheduler": "^0.26.0"
+    "react-dom": "^19.1.0"
   }
 }

@@ -1,4 +1,4 @@
-# @hooks/use-notification
+# @justhookit/use-notification
 React Hook to enable web browser notifications.
 
 ## Installation

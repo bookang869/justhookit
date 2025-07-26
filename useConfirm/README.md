@@ -1,4 +1,4 @@
-# @hooks/use-confirm
+# @justhookit/use-confirm
 React Hook to ask the user for confirmation before executing a function.
 
 ## Installation

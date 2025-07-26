@@ -1,4 +1,4 @@
-# @hooks/use-full-screen
+# @justhookit/use-full-screen
 React Hook to activate/deactivate full screen mode on any React element.
 
 ## Installation

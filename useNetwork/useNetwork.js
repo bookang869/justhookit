@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useNetwork = (onChange) => {
+export const useNetwork = (onChange) => {
 	const [status, setStatus] = useState(navigator.onLine);
 
 	const handleChange = () => {
@@ -21,5 +21,3 @@ const useNetwork = (onChange) => {
 	}, []);
 	return status;
 };
-
-export default useNetwork;

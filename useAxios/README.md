@@ -1,4 +1,4 @@
-# @hooks/use-axios
+# @justhookit/use-axios
 React Hook to fetch data using Axios with built-in loading, error, and refetch support.
 
 ## Installation

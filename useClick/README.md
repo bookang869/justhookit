@@ -1,4 +1,4 @@
-# @hooks/use-click
+# @justhookit/use-click
 React Hook to detect a click on any React element.
 
 ## Installation

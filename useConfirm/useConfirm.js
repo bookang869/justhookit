@@ -1,4 +1,4 @@
-const useConfirm = (message = "", onConfirm, onCancel) => {
+export const useConfirm = (message = "", onConfirm, onCancel) => {
     if (!onConfirm || typeof onConfirm !== "function") {
       return;
     }
@@ -16,5 +16,3 @@ const useConfirm = (message = "", onConfirm, onCancel) => {
     };
     return confirmAction;
 };
-
-export default useConfirm;

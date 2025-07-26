@@ -1,4 +1,4 @@
-# @hooks/use-fade-in
+# @justhookit/use-fade-in
 React Hook to apply a fade-in effect to any React element.
 
 ## Installation

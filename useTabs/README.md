@@ -1,4 +1,4 @@
-# @hooks/use-tabs
+# @justhookit/use-tabs
 React Hook to naviagte between different tabs.
 
 ## Installation

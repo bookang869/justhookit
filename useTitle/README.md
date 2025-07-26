@@ -1,4 +1,4 @@
-# @hooks/use-title
+# @justhookit/use-title
 React Hook to dynamically update the browser title.
 
 ## Installation
